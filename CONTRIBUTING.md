@@ -1,4 +1,4 @@
-# Welcome to Scaffold-Lisk Contributing Guide
+nv# Welcome to Scaffold-Lisk Contributing Guide
 
 Thank you for investing your time in contributing to Scaffold-Lisk!
 

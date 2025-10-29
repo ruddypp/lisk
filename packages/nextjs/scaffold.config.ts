@@ -1,4 +1,3 @@
-import { liskSepolia } from "./chains";
 import * as chains from "viem/chains";
 
 export type ScaffoldConfig = {
@@ -8,6 +7,22 @@ export type ScaffoldConfig = {
   walletConnectProjectId: string;
   onlyLocalBurnerWallet: boolean;
   walletAutoConnect: boolean;
+};
+
+// Define Lisk Sepolia locally to avoid relying on chains.ts (protected by Husky)
+const liskSepolia: chains.Chain = {
+  id: 4202,
+  name: "Lisk Sepolia",
+  network: "lisk-sepolia",
+  nativeCurrency: { name: "Sepolia Ether", symbol: "ETH", decimals: 18 },
+  rpcUrls: {
+    default: { http: ["https://rpc.sepolia-api.lisk.com"] },
+    public: { http: ["https://rpc.sepolia-api.lisk.com"] },
+  },
+  blockExplorers: {
+    default: { name: "Blockscout", url: "https://sepolia-blockscout.lisk.com" },
+  },
+  testnet: true,
 };
 
 const scaffoldConfig = {
