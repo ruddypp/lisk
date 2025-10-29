@@ -1,0 +1,11 @@
+{
+  "installCommand": "yarn workspaces focus @se-2/nextjs --production",
+  "buildCommand": "yarn workspace @se-2/nextjs build",
+  "outputDirectory": "packages/nextjs/.next",
+  "env": {
+    "NODE_VERSION": "20",
+    "YARN_ENABLE_IMMUTABLE_INSTALLS": "false",
+    "YARN_ENABLE_SCRIPTS": "false"
+  }
+}
+
